@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/background.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position:  center center;
+    background-attachment: fixed;
+
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    transition: 0.6s ease;
+}
+
+ul li a:hover{
+    background-color: white;
+    color: rgb(250, 250, 250);
+
+}
+
+
+.logo img{
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 2%;
+    top: 2%;
+}
+   
+
+.button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btn{
+    border: 1px solid black;
+    padding: 20px 40px;
+    color: rgb(8, 8, 8);
+    background-color: rgb(212, 148, 28);
+    text-decoration: none;
+    transition: 0.6s ease;
+    border-radius: 5%;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: rgb(250, 4, 147);
+    color: rgb(255, 255, 255);
+}
+
+.media{
+    float: right;
+    position: absolute;
+    left: 80%;
+}
+
+.fa{
+    padding: 15px;
+    font-size: 50px;
+    width: 20px;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px 2px;
+    border-radius: 50%;
+    
+}
+
+.fa:hover{
+    color: white;
+}
+
+.fa-instagram{
+    color: white;
+}
+
+.fa-instagram:hover{
+    background-color: #C13584;
+    
+}
+
+.fa-facebook-f{
+    color: white;
+}
+
+.fa-facebook-f:hover{
+    background-color: #3b5998;
+}
+
+.fa-twitter{
+    color: white;
+}
+
+.fa-twitter:hover{
+background-color:#1DA1F2 ;
+}

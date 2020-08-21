@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Transport</title>
+        <link rel="icon" type="image/pngt" href="Images/logo.png"/>
+        <link rel="stylesheet" type="text/css" href="CSS/All.css">
+        <link rel="stylesheet" type="text/css" href="CSS/transport.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+      <header>
+
+        <a href="landing.html">
+          <img class="logo" src="Images/logo.png" alt="logo"></a>
+
+
+            <!--The main navigation-->
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><i class="fa fa-bars"></i></label>
+            <div class="wrapper">
+              <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Activities.html">Activities</a></li>
+        <li><a href="Accommodation.html">Accommodation</a></li>
+        <li><a href="Transport.html">Transport</a></li>
+        <li><a href="Contact-US.html">Contact-Us</a></li>
+        </ul>
+        </div>
+
+
+      </header>
+
+       
+        <!--Taxi Ordering Form-->       
+<div class="container1">
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="taxiType">Taxi type</label>
+    </div>
+    <div class="col-75">
+      <select id="taxiType" name="taxiType" onchange="taxiTypeChanged()">
+		<option value="">Select Taxi type</option>
+        <option value="Tuk Tuk">Tuk Tuk</option>
+        <option value="Mini Car">Mini Car</option>
+        <option value="Luxury Car">Luxury Car</option>
+		<option value="Luxury Van">Luxury Van</option>
+		<option value="Luxury Bus">Luxury Bus</option>
+      </select>
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-25">
+      <label for="fuel">Fuel Efficiency</label>
+    </div>
+    <div class="col-75">
+      <select  name="fuel" id="Fuel" onchange="fuelEfficiencyChanged()">
+	  <option value="">Select Fuel Efficiency</option>
+        <option value="High">High</option>
+        <option value="Medium">Medim(default)</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-25">
+      <label for="stay">Stay</label>
+    </div>
+    <div class="col-75">
+      <select name="stay" id="Stay" onchange="stayChanged()">
+	  <option value="One Way">Select Stay Type</option>
+        <option value="One Way">One Way</option>
+        <option value="Two Way">Two Way</option>
+        <option value="Over Night">Over night</option>
+      </select>
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Distance</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Distance" name="distance" placeholder="Distance" onchange="currentDistanceChanged(this.value)">
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Pick Up Location</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="location" name="location" placeholder="Pick Up Location">
+    </div>
+  </div><br><br>
+  
+  <div class="btnrow">
+	<input class="btn" type="submit" value="Order Favourite" onclick="getFromFavourite()">
+	<input class="btn" type="submit" value="Add to Favourite"  onclick="addFavourite()"> 
+	<input class="btn" type="submit" value="Reserve" onclick="reserve()">  
+    <input class="btn" type="submit" value="Add Order" onclick="addOrder()">
+
+  </div>
+ 
+</div>
+
+<div class="row">
+
+  <div class="tcolumn">
+  <h3 class=".">current reservation</h3>
+	  <label class = "label" for="currentTaxi" id="currentTaxi">Current Taxi :</label><br>
+	  <label class = "label" for="currentTaxi" id="fuelEfficiency">Fuel Efficiency :</label><br>
+	  <label class = "label" for="currentTaxi" id="StayCurrent">Stay :</label><br>
+	  <label class = "label"  id="currentDistance">Distance : 0</label><br>
+	  <label class = "label" for="costofcurrent" id="currentCost">cost of current Taxi : 0</label>  
+  </div>
+  
+  <div class="tcolumn">
+	<h3>overall reservation</h3>
+		<label class = "label" for="overallOrder">All Taxi(s):</label>
+		<label class = "label" id="lbl1"></label><br>
+		<label class = "label" for="overallOrder">Overall Cost:</label>
+		<label class = "label" id="lbl2"> 0 </label><br>
+		<label class = "label" for="overallOrder">Total Distance:</label>
+		<label class = "label" id="lbl3"> 0 </label>
+  </div>
+  
+</div>
+ 
+        <footer>
+            <div class="main-content">
+              <div class="left box">
+                <h2>Travel Union Worldwide</h2>
+      <div class="content">
+                  <p> We are a tourist information centre located in Sri Lanka where we attract tourists from different locations worldwide.<br> We work as an Inbound Tour Operator and focus mainly on organizing <br> <strong> Nature Tours, Beach Tours, Round Tours & Group Tours.</strong>
+      <div class="social">
+                    <a href="https://www.facebook.com/Travel-Union-Worldwide-114256366944184/"><span class="fa fa-facebook-f"></span></a>
+                    <a href="https://www.instagram.com/_travel_union_worldwide_/"><span class="fa fa-instagram"></span></a>
+                    <a href="https://twitter.com/TravUWorld"><span class="fa fa-twitter"></span></a>
+                  </div>
+      </div>
+      </div>
+      <div class="right box">
+                <h2>
+      Address</h2>
+      <div class="content">
+                  <div class="place">
+                    <a href="Contact-US.html"><span class="fa fa-map-marker"></span></a>
+                    <span class="text">No.20, Negombo Street, Sri Lanka</span>
+                  </div>
+      <div class="phone">
+        <a href="Contact-US.html"><span class="fa fa-phone"></span></a>
+                    <span class="text">+94-076-777-0577</span>
+                  </div>
+      <div class="email">
+        <a href="Contact-US.html"><span class="fa fa-envelope"></span></a>
+                    <span class="text">info@travelunionworldwide.com</span>
+                  </div>
+      </div>
+            </div>
+
+            </div>
+        </footer>
+          
+
+            <script src="javascript/transport.js"></script>
+
+            <script>
+              var type = '';
+              var distance = 0;
+              var fuelEfficiency = '';
+              var stay = '';
+              var Cost = 0;
+              function taxiTypeChanged() {
+                type = document.getElementById("taxiType").value;
+                document.getElementById("currentTaxi").innerHTML = "Current Taxi : " + type;
+                cost();
+              }
+              function fuelEfficiencyChanged() {
+                fuelEfficiency = document.getElementById("Fuel").value;
+                document.getElementById("fuelEfficiency").innerHTML = "Fuel Efficiency : " + fuelEfficiency;
+                cost();
+              }
+              function stayChanged() {
+                stay = document.getElementById("Stay").value;
+                document.getElementById("StayCurrent").innerHTML = "Stay : " + stay;
+                cost();
+              }
+              function currentDistanceChanged(val) {
+                distance = val;
+                document.getElementById("currentDistance").innerHTML = "Distance : " + distance;
+                cost();
+              }
+              
+              function cost() {
+                
+                var costType = 0;
+                var costStay = 0;
+                var costFlue = 0;
+                
+                if(type == "Tuk Tuk") {
+                  costType = 50;
+                }
+                if(type == "Mini Car") {
+                  costType = 75;
+                }
+                if(type == "Luxury Car") {
+                  costType = 100;
+                }
+                if(type == "Luxury Van") {
+                  costType = 150;
+                }
+                if(type == "Luxury Bus") {
+                  costType = 200;
+                }
+                
+                
+                if(fuelEfficiency == "High") {
+                  costFlue = 2000;
+                }
+                if(fuelEfficiency == "Medium") {
+                  costFlue = 1000;
+                }
+                if(fuelEfficiency == "Low") {
+                  costFlue = 500;
+                }
+                
+                if(stay == "One Way") {
+                  costStay = costType * distance;
+                }
+                if(stay == "Two Way") {
+                  costStay = 2 * (costType * distance);
+                }
+                if(stay == "Over Night") {
+                  costStay = 2 * (costType * distance) + 5000;
+                }
+                
+                Cost = costFlue + costStay;
+                document.getElementById("currentCost").innerHTML = "cost of current Taxi  : " + Cost;
+              }
+              
+              function addOrder() {
+                var currentTaxis = document.getElementById("lbl1").innerHTML;
+                var allTaxis = currentTaxis  +  type + " , ";
+                document.getElementById("lbl1").innerHTML = allTaxis;
+                
+                
+                var currentTot = document.getElementById("lbl2").innerHTML;
+                var tot = parseInt(Cost , 10) +  parseInt(currentTot , 10);
+                document.getElementById("lbl2").innerHTML = tot;
+                
+                
+                var currentTotDistance = document.getElementById("lbl3").innerHTML;
+                var totDistance = parseInt(distance , 10) +  parseInt(currentTotDistance , 10);
+                document.getElementById("lbl3").innerHTML = totDistance;
+              }
+              
+              function reserve() { 
+                document.getElementById("lbl1").innerHTML = "";
+                document.getElementById("lbl2").innerHTML = "0";
+                document.getElementById("lbl3").innerHTML = "0";
+                
+                document.getElementById("currentCost").innerHTML = "cost of current Taxi  : " ;
+                document.getElementById("currentDistance").innerHTML = "Distance : ";
+                document.getElementById("StayCurrent").innerHTML = "Stay : ";
+                document.getElementById("fuelEfficiency").innerHTML = "Fuel Efficiency : ";
+                document.getElementById("currentTaxi").innerHTML = "Current Taxi : " ;
+                
+                alert("Reservation Successfull. Thank you.");
+              }
+              
+              function addFavourite() { 
+                var location = document.getElementById("location").value;
+                localStorage.setItem("taxiType",type);
+                localStorage.setItem("distance",distance);
+                localStorage.setItem("fuelEfficiency",fuelEfficiency);
+                localStorage.setItem("stay",stay);
+                localStorage.setItem("location",location);
+                localStorage.setItem("Cost",Cost);
+                alert(localStorage.getItem("stay"));
+              }
+              function getFromFavourite() { 
+                document.getElementById("currentCost").innerHTML = "cost of current Taxi  : " +  localStorage.getItem("Cost");
+                document.getElementById("currentDistance").innerHTML = "Distance : " + localStorage.getItem("distance");
+                document.getElementById("StayCurrent").innerHTML = "Stay : " + localStorage.getItem("stay");
+                document.getElementById("fuelEfficiency").innerHTML = "Fuel Efficiency : " + localStorage.getItem("fuelEfficiency");
+                document.getElementById("currentTaxi").innerHTML = "Current Taxi : "  + localStorage.getItem("taxiType");
+                
+                
+                document.getElementById("taxiType").value = localStorage.getItem("taxiType");
+                document.getElementById("Fuel").value = localStorage.getItem("fuelEfficiency");
+                document.getElementById("Stay").value = localStorage.getItem("stay");
+                document.getElementById("Distance").value = localStorage.getItem("distance");
+                document.getElementById("location").value = localStorage.getItem("location");
+            
+              }
+            </script>
+            
+    </body>
+</html>

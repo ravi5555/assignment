@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tour Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/guide2.css">
+    <link rel="icon" type="image/pngt" href="Images/logo.png"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  </head>
+
+  <!--Nagation-->
+  <body>
+    <header>
+      <div class="inner-width">
+        <a href="landing.html" class="logo"><img src="Images/logo.png" alt=""></a>
+        <i class="menu-toggle-btn fas fa-bars"></i>
+        <nav class="navigation-menu">
+          <a href="Home.html"><i class="fas fa-home"></i> Home</a>
+          <a href="Activities.html"><i class="fas fa-hiking"></i> Activities</a>
+          <a href="Accommodation.html"><i class="fas fa-bed"></i> Accommodation</a>
+          <a href="Transport.html"><i class="fas fa-car"></i> Transport</a>
+          <a href="Contact-US.html"><i class="fas fa-headset"></i> Contact Us</a>
+        </nav>
+      </div>
+    </header> 
+
+
+    <!--Two sections with information-->
+
+    <div class="info-area">
+      <div class="info-text">
+        <h1>About Tour Guides in Sri Lanka</h1><br>
+        <p>Tourist guides provides the visitor with in depth knowledge in their mother tongue, smoothing creases and wrinkles
+           that is bound to occur while touring a foreign country for the first time.<br> It is best to choose a tourist guide who had been
+           professionally trained and authorized by Sri Lanka tourism, who are categorized as National Tourist Guides or Chauffeur Tourist Guides.<br> 
+           The National Tourist Guides caters to a large group of tourists traveling in luxury coaches driven by reserved drivers while Chauffeur Tourist Guides
+           would be guiding small groups<br> conveyed in small vans and luxury cars.</p><br>
+
+        <h2>Is your Travel Guide Licensed?</h2><br>
+          <p>Getting to know your travel guide is very important.
+             According to the Extraordinary Gazette of the Government of Sri Lanka (No.408/8 July 02, 1986) every Tourist Guide Lecturer<br>
+             should hold a license and an identity card that should be displayed on person while on duty. The license and the identity card
+             should be presented for inspection at all times.<br>  Without a valid license, nobody can practice Tour Guide Lecturing.
+             Those who act contrary to law will be punished.<br> Therefore make sure to get to know your travel Guide before they start 
+             provide you misleading information. </p>
+           <a href="https://srilanka.travel/tourist-guides">License Validity</a>  
+      </div>
+      <img src="Images/identity.jpeg" alt="license">
+      <div class="info-img">
+      </div>
+    </div>
+    
+    <!--Page Footer-->
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <div class="social-media">
+            <a href="https://www.facebook.com/Travel-Union-Worldwide-114256366944184/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/TravUWorld"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/_travel_union_worldwide_/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tripadvisor.com/"><i class="fab fa-tripadvisor"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+
+
+          </div>
+        </div>
+
+        <!--Footer Form-->
+
+        <div class="right-col">
+          <h1>Feedback</h1>
+          <div class="border"></div><br>
+          <p>Contact Us in any situation</p><br>
+          <form action="#" class="newsletter-form">
+            <input type="text" class="txtb" placeholder="Type Your Message">
+            <input type="submit" class="btn" value="submit">
+          </form>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      $(".menu-toggle-btn").click(function(){
+        $(this).toggleClass("fa-times");
+        $(".navigation-menu").toggleClass("active");
+      });
+    </script>
+
+  </body>
+</html>
